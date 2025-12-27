@@ -5,8 +5,8 @@ theme = "github-style"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 # 启用相对URL（关键，所有链接自动适配子路径）
-relativeURLs = true
-canonifyURLs = false
+# relativeURLs = true
+# canonifyURLs = false
 
 # 启用标签/分类（保留之前的配置）
 [taxonomies]
@@ -36,7 +36,7 @@ canonifyURLs = false
   #instagram = "bearfly1990"
   #tumblr = "bearfly1990"
   email = "bearfly1990@163.com"
-  url = "https://bearfly1990.github.io/BF-Hugo/"
+  # url = "https://bearfly1990.github.io/BF-Hugo/"
   keywords = "blog, google analytics"
   rss = true
   lastmod = true
