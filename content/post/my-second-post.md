@@ -8,6 +8,7 @@ tags:
   - github-style
   - 教程
   - 标签
+categories: ["chinese"] 
 ---
 ## Introduction
 
