@@ -5,8 +5,8 @@ theme = "github-style"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 # 启用相对URL（关键，所有链接自动适配子路径）
-# relativeURLs = true
-# canonifyURLs = false
+relativeURLs = true
+canonifyURLs = false
 
 # 启用标签/分类（保留之前的配置）
 [taxonomies]
