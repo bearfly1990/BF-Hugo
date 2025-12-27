@@ -5,8 +5,8 @@ theme = "github-style"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 # 启用相对URL（关键，所有链接自动适配子路径）
-# relativeURLs = true
-# canonifyURLs = false
+relativeURLs = true
+canonifyURLs = false
 
 # 启用标签/分类（保留之前的配置）
 [taxonomies]
@@ -52,10 +52,10 @@ pygmentsUseClasses = true
   [params.gitalk]
     clientID = "Your client ID" # Your client ID
     clientSecret = "Your client secret" # Your client secret
-    repo = "bearfly1990" # 您的博客的github地址Repository name，例如：xxxx.github.io
-    owner = "bearfly1990@163.com" # 您的GitHub ID
-    admin = "bearfly1990@163.com" # 您的GitHub ID
-    id = "location.pathname" # 文章页面的链接地址就是ID
+    repo = "BF-Hugo" # 您的博客的github地址Repository name，例如：xxxx.github.io
+    owner = "bearfly1990" # 您的GitHub ID
+    admin = "bearfly1990" # 您的GitHub ID
+    id = "https://bearfly1990.github.io/BF-Hugo/" # 文章页面的链接地址就是ID
     labels = "gitalk" # Github issue labels. If you used to use Gitment, you can change it
     perPage = 15 # Pagination size, with maximum 100.
     pagerDirection = "last" # Comment sorting direction, available values are 'last' and 'first'.
