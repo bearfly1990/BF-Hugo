@@ -1,5 +1,9 @@
 (() => {
-  fetch('/index.json')
+  const appURL = document.querySelector('.Header-link').href;
+  // const parsedUrl = new URL(appURL);
+  // const path = parsedUrl.pathname; // 获取路径部分："/BF-Hugo/"
+  console.log('App path:', appURL);
+  fetch(appURL + '/index.json')
   .then(response => response.json())
   .then(data => {
     const fuse = new Fuse(data, {
