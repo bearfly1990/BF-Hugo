@@ -82,5 +82,6 @@ canonifyURLs = true
   [services.googleAnalytics]
     ID = "UA-123456-789"
 
-
+[imaging]
+  lazyLoading = true
 

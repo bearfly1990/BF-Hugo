@@ -1,13 +1,6 @@
 ---
 ---
-`Hello World!`
 
-## Skill
+# 我的日记
 
-- C++
-- Java
-
-## Food
-
-- Orange
-- Apple
+这个 Blog 主要用来写自己的日记，简洁好用。
