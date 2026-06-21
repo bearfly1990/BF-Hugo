@@ -1,13 +1,11 @@
 ---
 date: 2025-01-28
-title: 2025-01-28-dairy
+title: 生命，选择，未来
 author: bearfly1990
 pin: false
 tags:
   - 写作
 ---
-
-# 写在乙巳蛇年除夕
 
 ## 引子（一）
 

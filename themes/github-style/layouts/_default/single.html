@@ -1,6 +1,54 @@
 {{ define "content" }}
+<!-- 标题背景封面图（适配/BF-Hugo/子路径，复制直接覆盖原标题栏） -->
+{{/* 优先用文章封面，无则用全站默认封面 */}} {{ $cover := .Params.cover |
+default .Site.Params.defaultCover }} {{ if $cover }}
+<div
+  class="post-header-cover"
+  style="
+    background: url('{{ .Site.BaseURL }}{{ $cover }}') no-repeat center center;
+    background-size: cover;
+    padding: 80px 20px;
+    /* border-radius: 8px; */
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  "
+>
+  <!-- 文章标题（白色+文字阴影，保证可读性） -->
+  <h1
+    class="post-title"
+    style="
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      font-size: 2.2rem;
+      margin: 0;
+      font-weight: bold;
+    "
+  >
+    {{ .Title }}
+  </h1>
+  <!-- 文章日期/分类（浅白+阴影） -->
+  <p
+    class="post-meta"
+    style="
+      color: #f0f0f0;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+      margin: 15px 0 0 0;
+      font-size: 1rem;
+    "
+  >
+    {{ .Date.Format "2006-01-02" }} · {{ with .Params.categories }}{{ delimit .
+    ", " }}{{ else }}无分类{{ end }}
+  </p>
+</div>
+{{ else }}
+<!-- 无封面时显示普通标题（兜底） -->
+<div class="post-header">
+  <h1 class="post-title">{{ .Title }}</h1>
+  <p class="post-meta">{{ .Date.Format "2006-01-02" }}</p>
+</div>
+{{ end }}
 <div class="application-main">
-  {{ partial "post.html" .}}
-  {{ partial "gitalk.html" . }}
+  {{ partial "post.html" .}} {{ partial "gitalk.html" . }}
 </div>
 {{ end }}

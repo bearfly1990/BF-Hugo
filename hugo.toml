@@ -7,6 +7,11 @@ pygmentsUseClasses = true
 # 启用相对URL（关键，所有链接自动适配子路径）
 relativeURLs = false
 canonifyURLs = true
+[server]
+  disableFastRender = true    # 关闭快速渲染，强制全量更
+  #noHTTPCache = true          # 禁用服务端缓存
+  #watch = true                # 强制监听文件变更
+  #liveReload = true           # 开启自动刷新（浏览器自动更，不用手动刷）
 
 # 启用标签/分类（保留之前的配置）
 [taxonomies]
@@ -36,7 +41,8 @@ canonifyURLs = true
   #tumblr = "bearfly1990"
   email = "bearfly1990@163.com"
   # url = "https://bearfly1990.github.io/BF-Hugo/"
-  keywords = "blog, google analytics"
+  keywords = "blog, bearfly1990"
+  defaultCover = "img/post-bg-miui6.jpg"
   rss = true
   lastmod = true
   favicon = "/images/github-mark.png"
@@ -78,10 +84,14 @@ canonifyURLs = true
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]
 
-[services]
-  [services.googleAnalytics]
-    ID = "UA-123456-789"
+#[services]
+# [services.googleAnalytics]
+#   ID = "UA-123456-789"
 
 [imaging]
   lazyLoading = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
